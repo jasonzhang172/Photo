@@ -1,0 +1,688 @@
+body{
+  overflow-x:hidden;
+  background:rgba(99, 73, 73, 0.13);
+}
+
+
+
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.button {
+  border-radius: 100px;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.phones {
+  position: relative;
+}
+.phone {
+  position: relative;
+  max-width: 80%;
+  margin: 3rem auto -12rem;
+}
+.phone + .phone {
+  display: none;
+}
+
+/* Values
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.values {
+  background: rgb(2, 12, 51);
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 5rem;
+  position: relative;
+  top: 150px;
+}
+
+.value-multiplier {
+  margin-bottom: .5rem;
+  color: #11DFC7;
+}
+.value-heading {
+  margin-bottom: .3rem;
+}
+.value-description {
+  opacity: .8;
+  font-weight: 300;
+}
+
+/* Help
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.get-help {
+  border-bottom: 1px solid #ddd;
+    padding: 40rem 0 30rem;
+}
+
+/* Categories
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section.categories {
+ /* background-image: url('../img/globe/1.jpg');*/
+ background-size: cover;
+ color: #fff;position: relative;
+
+}
+.categories > img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+}
+
+.categories .section-description { 
+  margin-bottom: 4rem;
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+  .hero {
+    padding-bottom: 12rem;
+    text-align: left;
+    height: 165px;
+  }
+  .phone {
+    position: absolute;
+    top: -7rem;
+    right: 3rem;
+    max-height: 362px;
+    z-index: 3;
+  }
+  .phone + .phone {
+    top: -6rem;
+    display: block;
+    max-width: 73.8%;
+    right: 0;
+    z-index: 2;
+    max-height: 338px;
+  }
+  .hero-heading {
+    font-size: 3.0rem;
+    position:relative;
+    z-index:100;
+    color:black;
+    font-weight:600;
+
+  }.section.get-help {
+  border-bottom: 1px solid #ddd;
+    padding: 40rem 0 30rem;
+}
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .hero {
+    height: 190px;
+  }
+  .hero-heading {
+    font-size: 3.2rem; z-index:100;color:black;
+  }
+  .section {
+    padding: 14rem 0 15rem;
+  }
+  .hero {
+    padding: 16rem 0 14rem;
+
+  }
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .phone {
+    top: -14rem;
+    right: 5rem;
+    max-height: 510px;
+  }
+  .phone + .phone {
+    top: -12rem;
+    max-height: 472px;
+  }
+  .categories {
+    padding: 15rem 0 8rem;
+  }.section.get-help {
+  border-bottom: 1px solid #ddd;
+    padding: 40rem 0 30rem;
+}
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .section {
+    padding: 20rem 0 5rem;
+  }
+  .hero {
+    padding: 22rem 0;
+  }
+  .hero-heading {
+    font-size: 4rem; 
+    z-index:100;
+    color:black;
+  }
+  .phone {
+    top: -16rem;
+    max-height: 615px;
+  }
+  .phone + .phone {
+    top: -14rem;
+    max-height: 570px;
+  }
+}
+/**********************************/
+@media (max-width:1375px){
+  .container .row .one-half.column.phones{
+    display:none;
+  }
+
+}
+
+.container .row .one-half.column.phones{
+
+ width:700px;
+ margin-left:350px;
+ margin-top:-100px;
+}
+/**********************************/
+
+
+
+.tint{
+  position:relative;
+  width:500px;
+  height:400px;
+  cursor: pointer;
+  box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+  overflow:hidden;
+  z-index:6;
+
+}
+.tint.first{
+  position:relative;
+  bottom:150px;
+  left:50px;
+  z-index:200;
+}
+.tint img{
+  height:500px;
+  width:700px;
+
+}
+.tint:before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(210, 232, 232, 0.24);
+  transition: all .2s linear;
+}
+.tint.one{
+
+ position: absolute;
+ right: -100px;
+ top: -200px;
+ z-index:199;
+ overflow:hidden;
+}
+.tint.one img{
+
+  left:-50px;
+  width:600px;
+  height:400px;
+}
+
+
+.tint.one:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(210, 232, 232, 0.24);
+
+}
+
+.tint.two{
+
+ position: absolute;
+ left:110px;
+ top: -250px;
+ z-index:1;
+}
+
+.tint:hover:before, .tint.one:hover:before, .tint.two:hover:before 
+{ 
+
+  background: none;  transform:scale(1.0);
+  -ms-transform:scale(1.0);
+  -moz-transform:scale(1.0);
+  -webkit-transform:scale(1.0);
+  -o-transform:scale(1.0);
+
+}
+
+/*------Add and Remove these Css properties, on mouseenter-----*/
+/*First image*/
+.me img{
+  /* Making images appear bigger and transparent on mouseover */
+  cursor: pointer;
+  transform:translateX(-30px);
+
+  -webkit-transition: all 7s ease;
+  -moz-transition: all 7s ease;
+  -o-transition: all 7s ease;
+  transition: all 7s ease;
+  
+}
+.meone img{
+  /* Making images appear bigger and transparent on mouseover */
+  cursor: pointer;
+  transform:scale(1.1,1.1);
+
+  -webkit-transition: all 8s ease;
+  -moz-transition: all 8s ease;
+  -o-transition: all 8s ease;
+  transition: all 8s ease;
+
+}
+.metwo img{
+ cursor: pointer;
+ transform:translateY(-30px);
+
+ 
+ -webkit-transition: all 8s ease;
+ -moz-transition: all 8s ease;
+ -o-transition: all 8s ease;
+ transition: all 8s ease;
+
+
+}
+/*------------TINTS ON CLICK
+-----------------------------------*/
+.tint.first.clicked{
+  position:relative;
+  top:-250px;
+  left:-70%;
+  z-index:202;
+  box-shadow:none;
+  background:transparent;
+  width:180%;
+  height:180%;
+  -webkit-transform: rotate(360deg); /* Safari */
+  transform: rotate(360deg);
+  -webkit-transition:1s; 
+}
+.tint.first.clicked img{
+  width:100%;
+  height:100%;
+  position:relative;
+  bottom:0;
+}
+.tint.first.clicked:before{
+  margin-bottom:10px;
+}
+
+.tint.one.clicked{
+  position:relative;
+  top:-650px;
+  left:-55%;
+
+  z-index:201;
+  box-shadow:none;
+  background:transparent;
+  width:150%;
+  height:150%;
+  -webkit-transform: rotate(360deg); /* Safari */
+  transform: rotate(360deg);
+  -webkit-transition:1s; 
+}
+.tint.one.clicked img{
+  width:100%;
+  height:100%;
+}
+.tint.one.clicked:before{
+  margin-bottom:7px;
+}
+.tint.two.clicked{
+  position:relative;
+  top:-650px;
+  left:-55%;
+
+  z-index:202;
+  box-shadow:none;
+  background:transparent;
+  width:150%;
+  height:150%;
+  -webkit-transform: rotate(360deg); /* Safari */
+  transform: rotate(360deg);
+  -webkit-transition:1s; 
+}
+.tint.two.clicked img{
+  width:100%;
+  height:100%;
+}
+.tint.two.clicked:before{
+  margin-bottom:10px;
+}
+/*************Background**/
+
+.section.hero::after{ 
+  content: "";
+  background-image:url(../img/4.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  background-size:cover;
+  height:1400px; /*Cover white spot*/
+  background-repeat:no-repeat;
+}
+
+.imgback img{
+  opacity:0.5;
+  height:100%;
+  width:100%;
+  position:relative;
+}
+
+/*----------Img-cover when clicking on Picture ------- */
+#img-cover {
+  position: fixed;
+  display:none;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:black;
+  opacity:0.6;
+  z-index:10;
+
+}
+#img-cover1 {
+  position: fixed;
+  display:none;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:black;
+  opacity:0.6;
+  z-index:10;
+
+}
+#img-cover2 {
+  position: fixed;
+  display:none;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:black;
+  opacity:0.6;
+  z-index:10;
+
+}
+
+/*--------------------------------------*/
+/* First Container Slide Show */
+/*--------------------------------------*/
+
+
+.slides{
+  margin-top:250px;
+  height:160px;
+  overflow:hidden;
+  background:black;
+
+}
+
+.thumb{
+  display:inline-block;
+  /*border:solid 2px rgba(0, 0, 0, 0.29);*/
+  width:150px;
+  height:80%;
+  margin:0px;
+
+}
+
+.thumb img{
+  width:100%;
+  height:100%;
+}
+
+
+.thumb:hover{
+  /*border:solid 2px transparent;*/
+
+}
+
+.thumb:hover img{
+  opacity:1.0;
+  width:150%;
+  height:150%;
+}
+.thumb:hover:nth-child(odd) img{
+  opacity:1.0;
+  width:200%;
+  transition:1s ease;
+}
+
+.insideSlides{
+  width:2500px;
+  overflow:hidden;
+  height:200px;
+
+}
+/* ----Slide Controls -----*/
+.slide-control{
+  position:absolute;
+  height:165px;
+  width:50px;
+  background:rgba(50, 57, 61, 0.48);
+  opacity:.0;
+  z-index:2;
+}
+
+.slide-control:hover{
+  opacity:.2;
+}
+.slide-control.left{
+  left: 0;
+
+}
+.slide-control.right{
+  right: 0;
+}
+
+.slide_container{
+  width:100%;
+  background:black;
+}
+/*-------------- */
+/*TINTS */
+/*-------------- */
+.thumb{
+ position:relative;
+ overflow:hidden;
+ width:200px;
+ 
+
+
+}
+
+.thumb img{
+  width:100%;
+  height:100%;
+  opacity:.4;
+  transition: .5s ease;
+}
+
+/*----------------------------*/
+/*-----SlideShow End --------------*/
+/*----------------------------*/
+
+
+/*----------------------------*/
+/*-----Navbar --------------*/
+/*----------------------------*/
+.navbar{
+  height:51px;
+
+}
+@media (min-width: 768px){
+  .navbar {
+    border-radius:none;
+  }
+
+}
+
+span.now{
+
+  color:#D43799;
+}
+
+
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: #00A8FF;
+}
+
+li.now{
+  background:#92DFFB;
+}
+.nav.navbar-nav.navbar-right > li.now >a>span.now:hover{
+  color:blue;
+}
+
+li.now div.tooltip {
+  text-align: center;
+  width:180px;
+
+}
+
+
+/*Nav Stuff
+-----------------------------*/
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #FFF;
+}
+.navbar-default{
+  background-color: rgba(255, 255, 255, 0);
+  border-color:rgba(255, 255, 255, 0);
+}
+.navbar-default .navbar-nav > li > a {
+  color: #000;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: rgba(231, 231, 231, 0.22);
+}
+
+.dropdown-menu{
+  background:rgba(255, 255, 255, 0.44);
+}
+
+#bottomNav{
+  margin-right:5px;
+}
+/*Nav Tabs 
+-----------------------------*/
+.nav-tabs { border-bottom: 2px solid transparent; }
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
+.nav-tabs > li > a { border: none; color: #666; }
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #4285F4 !important; background: transparent; }
+.nav-tabs > li > a::after { content: ""; background: #DE3232; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+.nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
+.tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }
+
+/*Footer
+-----------------------------*/
+
+footer{
+  background:#383737;
+  position:relative;
+  z-index:100;
+}
+
+.nav.navbar-nav.second{
+  display:inline-block;
+  float:none;
+}
+
+.container.ok{
+  text-align:center;
+}
+
+hr{
+  margin-top:-10px;
+  margin-bottom:-2px;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    color: red;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+
+/* ========================================================*/
+/* Information section - Can use for cool, do this etc. */
+/*
+.one:hover,
+.fa.fa-globe, 
+.one>.value-multiplier,
+.one>.value-heading,
+.one>.value-description{
+  position:relative;
+
+z-index:1000;
+
+}
+
+.two:hover,
+.fa.fa-language, 
+.two>.value-multiplier,
+.two>.value-heading,
+.two>.value-description{
+  position:relative;
+
+z-index:1000;
+
+}
+*/
+#section-cover{
+  position: fixed;
+  display:none;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:black;
+  opacity:0.6;
+  z-index:500;
+
+}
+
