@@ -8,7 +8,7 @@ Tech's used:<br>
 *CSS3<br>
 *Javascript<br>
 *Bootstrap<br>
-*jQuery
+*jQuery<br>
 *Skeleton
 
 
